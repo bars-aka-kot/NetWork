@@ -31,9 +31,8 @@ namespace Server
                     Message? message = Message.DeserializeMessgeFromJSON(messageTxt);
                     if (message.Text.ToLower().Equals("exit")) cts.Cancel();
                     message.PrintGetMessageFrom();
+                cts.Cancel();
                 }
-            
-
         }
     }
 }
